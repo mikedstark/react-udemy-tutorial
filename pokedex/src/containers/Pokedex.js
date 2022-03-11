@@ -4,7 +4,7 @@ export default function Pokedex() {
   return (
     <div>
         <h1>
-            Hello World
+            Hello World!!!
         </h1>
     </div>
   )
