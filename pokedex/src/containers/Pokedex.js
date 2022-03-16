@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   pokedexContainer: {
     textAlign: "center",
     padding: "70px 10px 0px 10px",
-    backgroundColor: 'rgb(68, 68, 68)'
+    backgroundColor: 'darkgray'
   },
 }));
 
@@ -23,7 +23,7 @@ export default function Pokedex() {
         results.forEach((pokemon, index) => {
           let pokemonObject = {
             id: ++index,
-            url: IMAGE_API_URL + index + ".png",
+            image: IMAGE_API_URL + index + ".png",
             name: pokemon.name,
           };
           newPokemonData.push(pokemonObject);
@@ -40,7 +40,7 @@ export default function Pokedex() {
       {pokemonData ? (
         <Grid className={classes.pokedexContainer} container spacing={2}>
           {pokemonData.map((pokemon) => {
-            return <PokemonCard pokemon={pokemon} image={pokemon.url}/>;
+            return <PokemonCard pokemon={pokemon} key={pokemon.id}/>;
           })}
         </Grid>
       ) : (

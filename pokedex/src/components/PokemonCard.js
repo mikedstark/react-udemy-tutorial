@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
 export default function PokemonCard(props) {
   const classes = useStyles()
 
-  const { pokemon, image } = props;
-  const {id, name} = pokemon;
+  const { pokemon } = props;
+  const {id, name, image} = pokemon;
   return (
     <Grid item xs={12} sm={2}>
       <Card className={classes.card}>

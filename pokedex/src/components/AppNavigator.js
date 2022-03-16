@@ -20,11 +20,10 @@ export default function AppNavigator() {
   const classes = useStyles()
 
   return (
-    // TODO: variant='h6' doesn't appear to be doing anything... why??? 
     <AppBar className={classes.AppBar} position='fixed'>
         <Toolbar>
             <Link to="/" className={classes.link}>
-              <Typography className={classes.title}>Pokedex</Typography>
+              <Typography className={classes.title} variant='h6'>Pokedex</Typography>
             </Link>
         </Toolbar>
     </AppBar>
