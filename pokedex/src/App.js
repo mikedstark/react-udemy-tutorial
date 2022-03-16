@@ -6,7 +6,7 @@ import Pokedex from './containers/Pokedex'
 export default function App() {
   return (
     <Router>
-      <AppNavigator></AppNavigator>
+      <AppNavigator />
       <Route path="/" component={Pokedex} />
     </Router>
   )

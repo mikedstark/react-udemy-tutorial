@@ -1,11 +1,10 @@
+import { Box } from '@material-ui/core'
 import React from 'react'
 
 export default function Pokedex() {
   return (
-    <div>
-        <h1>
-            Hello World!!!
-        </h1>
-    </div>
+    <Box>
+      
+    </Box>
   )
 }

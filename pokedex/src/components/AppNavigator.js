@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     AppBar: {
-        backgroungColor: 'black'
+        backgroundColor: 'black'
     },
     link: {
       textDecoration: 'none'
