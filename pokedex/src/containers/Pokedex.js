@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, CircularProgress, Grid, makeStyles } from "@material-ui/core";
 import axios from "axios";
 import { POKEMON_API_URL, IMAGE_API_URL } from "../config";
+import PokemonCard from "../components/PokemonCard";
 
 const useStyles = makeStyles((theme) => ({
   pokedexContainer: {
@@ -29,6 +30,9 @@ export default function Pokedex() {
         });
         setPokemonData(newPokemonData);
       }
+      else {
+        console.log(":::ERROR::: Failed to get Pokemon Data from api call in Pokedex.js :::ERROR:::")
+      }
     });
   }, []);
   return (
@@ -36,9 +40,7 @@ export default function Pokedex() {
       {pokemonData ? (
         <Grid className={classes.pokedexContainer} container spacing={2}>
           {pokemonData.map((pokemon) => {
-            return (
-              <h1>{pokemon.name}</h1>
-            );
+            return <PokemonCard pokemon={pokemon} image={pokemon.url}/>;
           })}
         </Grid>
       ) : (
