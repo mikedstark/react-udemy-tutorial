@@ -20,7 +20,8 @@ export default function AppNavigator() {
   const classes = useStyles()
 
   return (
-    <AppBar className={classes.AppBar} position='fixed' variant='h6'>
+    // TODO: variant='h6' doesn't appear to be doing anything... why??? 
+    <AppBar className={classes.AppBar} position='fixed'>
         <Toolbar>
             <Link to="/" className={classes.link}>
               <Typography className={classes.title}>Pokedex</Typography>
